@@ -1,0 +1,50 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.bg{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.el{
+    position: absolute;
+}
+
+.BG-cont{
+    position: relative;
+    background-image: url('images/BG_light.png');
+}
+
+.sm{
+    background-image: url(images/sunmoon.png);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sun{
+    background-image: url(images/sun.png);
+    z-index: 2;
+    opacity: 0;
+}
+.moon{
+    background-image: url(images/moon.png);
+    z-index: 2;
+    opacity: 1;
+}
+.computer{
+    background-image: url(images/computer.png);
+    z-index: 2;
+    opacity: 1;
+}
+.dial{
+    background-image: url(images/dial.png);
+    z-index: 3;
+}
