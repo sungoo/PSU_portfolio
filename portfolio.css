@@ -117,6 +117,12 @@ body {
   width: 30%;
   height: auto;
 }
+.contBox#blaBubble {
+  margin-top: 18%;
+  margin-left: 2%;
+  width: 30%;
+  height: auto;
+}
 .contBox {
   display: block;
   background-color: aliceblue;
