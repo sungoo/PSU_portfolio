@@ -23,6 +23,22 @@ const contCNT = [
     "개발 기간: 26년 2월~ 진행중<br>역할: 총괄, 전체 프로그래밍<br>아트, 스크립터, 기획 등등, 저 스스로를 포함, 총 7명의 사람을 모아 시작한 인디게임 개발 프로젝트입니다.<br>한국 콘텐츠 진흥원 인디게임 지원사업에도 도전하였으며, 비록 발탁되진 못했으나, 좌절하지 않고 여전히 진행중인 프로젝트입니다.<br>물건을 수리하는 것을 메인 컨텐츠로 내세운 네러티브형 퍼즐게임입니다.<br><a href='https://bsky.app/profile/team-bluelemonade.bsky.social' target='_blank'>프로젝트 계정(Bluesky)</a>"
 ];
 
+/////////////////////////////////////////
+//두루 쓰는 함수
+function Boing(thing){
+    thing.style.transform = 'scaleX(1.2)'
+    thing.style.transform = 'scaleY(0.8)'
+    setTimeout(() => {
+        thing.style.transform = 'scaleX(0.8)'
+        thing.style.transform = 'scaleY(1.2)'
+        setTimeout(() => {
+            thing.style.transform = 'scaleX(1)'
+            thing.style.transform = 'scaleY(1)'
+        }, 200);
+    }, 200);
+}
+////////////////////////////////////////////
+//메인 컨텐츠(포폴내용)
 function MainCntBooP(whatIcon){
     Boing(icon[whatIcon]);
     const title = contentBox.getElementsByTagName("h3")[0];
@@ -36,7 +52,15 @@ function MainCntBooP(whatIcon){
         isContHiding = false;
     }
 }
+function X_btn(){
+    contentBox.style.opacity = 0;
+    contentBox.style.transform = 'scale(0.1)';
+    contentBox.style.pointerEvents = 'none';
+    isContHiding = true;
+}
 
+////////////////////////////////////////////////
+//치즈 인형
 function copyFunc(int) {
     const copyTxt = [];
     copyTxt[0] = "https://blog.naver.com/qkrtjddn234";
@@ -47,19 +71,6 @@ function copyFunc(int) {
     navigator.clipboard.writeText(copyTxt[int]);
 
     alert(copyTxt[int] + "가 복사되었습니다.");
-}
-
-function Boing(thing){
-    thing.style.transform = 'scaleX(1.2)'
-    thing.style.transform = 'scaleY(0.8)'
-    setTimeout(() => {
-        thing.style.transform = 'scaleX(0.8)'
-        thing.style.transform = 'scaleY(1.2)'
-        setTimeout(() => {
-            thing.style.transform = 'scaleX(1)'
-            thing.style.transform = 'scaleY(1)'
-        }, 200);
-    }, 200);
 }
 
 function infoClose(){
